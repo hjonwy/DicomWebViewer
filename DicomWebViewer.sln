@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DicomWebViewer", "DicomWebViewer\DicomWebViewer.csproj", "{07278520-2EBD-4962-AE00-CAFDA8AE1394}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07278520-2EBD-4962-AE00-CAFDA8AE1394}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07278520-2EBD-4962-AE00-CAFDA8AE1394}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07278520-2EBD-4962-AE00-CAFDA8AE1394}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07278520-2EBD-4962-AE00-CAFDA8AE1394}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EBF0D31D-4F17-4731-A886-C1FF35E6DDE3}
+	EndGlobalSection
+EndGlobal
