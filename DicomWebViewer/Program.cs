@@ -19,6 +19,11 @@ namespace DicomWebViewer
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+            .ConfigureLogging((hostingContext, logging) =>
+            {
+                logging.AddLog4Net();
+                logging.SetMinimumLevel(LogLevel.Debug);
+            })
+            .UseStartup<Startup>();
     }
 }

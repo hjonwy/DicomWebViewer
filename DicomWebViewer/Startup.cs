@@ -5,13 +5,19 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace DicomWebViewer
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        ILogger _logger;
+
+        public Startup(IConfiguration configuration, ILoggerFactory loggerFactory, ILogger<Startup> logger)
         {
+            loggerFactory.AddLog4Net();
+            _logger = logger;
+
             Configuration = configuration;
         }
 
@@ -32,6 +38,9 @@ namespace DicomWebViewer
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            _logger.LogDebug("Start to config");
+            _logger.LogDebug("Is debugg {0}", env.IsDevelopment());
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
